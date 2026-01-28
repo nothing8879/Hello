@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Abhigna ❤️</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    text-align:center;
+    background:#ffeef2;
+}
+.container{margin-top:40px;}
+button{
+    padding:10px 20px;
+    font-size:18px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+.yes-btn{background:#ff4b6e;color:white;}
+.no-btn{background:#ccc;}
+.result-container{display:none;}
+.animal img{
+    width:100px;
+    border-radius:15px;
+    animation:bounce 2s infinite;
+}
+@keyframes bounce{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-10px)}
+}
+</style>
+</head>
+
+<body>
+
+<div class="question-container container">
+    <h2>Do you love me, Abhigna? 💖</h2>
+    <button class="yes-btn" id="yes">Yes</button>
+    <button class="no-btn" id="no">No</button>
+</div>
+
+<div class="result-container container" id="result">
+    <h2>I knew it, Abhigna 😍🐼</h2>
+
+    <div class="animal">
+        <img src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif">
+        <img src="https://media.giphy.com/media/ICOgUNjpvO0PC/giphy.gif">
+    </div>
+</div>
+
+<script>
+document.getElementById("yes").onclick = () => {
+    document.querySelector(".question-container").style.display="none";
+    document.getElementById("result").style.display="block";
+};
+
+document.getElementById("no").onmouseover = (e) => {
+    e.target.style.position="absolute";
+    e.target.style.left=Math.random()*70+"%";
+    e.target.style.top=Math.random()*70+"%";
+};
+</script>
+
+</body>
+</html>
